@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0B0B0D;
+    --bg-secondary: #151416;
+    --gold-primary: #D4AF37;
+    --gold-champagne: #F2E3B0;
+    --text-warm-white: #F5F2EB;
+    --burgundy-deep: #641C27;
+    --text-muted-grey: #A5A1A0;
+  }
+
+  body {
+    background-color: #0B0B0D;
+    color: #F5F2EB;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .font-serif-ceremony {
+    font-family: 'Cinzel Decorative', Georgia, serif;
+  }
+}
+
+/* Subtle Film Grain */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+/* Luxury Velvet Curtains */
+.velvet-curtain-left {
+  background: linear-gradient(90deg, 
+    #1d070b 0%, 
+    #3b0e16 25%, 
+    #2a0a10 50%, 
+    #4a121d 75%, 
+    #19060a 100%
+  );
+  box-shadow: inset -25px 0 50px rgba(0,0,0,0.85), 15px 0 40px rgba(0,0,0,0.7);
+}
+
+.velvet-curtain-right {
+  background: linear-gradient(270deg, 
+    #1d070b 0%, 
+    #3b0e16 25%, 
+    #2a0a10 50%, 
+    #4a121d 75%, 
+    #19060a 100%
+  );
+  box-shadow: inset 25px 0 50px rgba(0,0,0,0.85), -15px 0 40px rgba(0,0,0,0.7);
+}
+
+/* Champagne Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F2E3B0 40%, #D4AF37 80%, #AA8222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Satin Ribbon */
+.ribbon-gradient {
+  background: linear-gradient(180deg, 
+    #8f2233 0%, 
+    #641C27 40%, 
+    #46121a 80%, 
+    #320c13 100%
+  );
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+/* Custom Scissors Pointer */
+.cursor-scissors {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6' cy='6' r='3'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Cline x1='20' y1='4' x2='8.12' y2='15.88'/%3E%3Cline x1='14.47' y1='14.48' x2='20' y2='20'/%3E%3Cline x1='8.12' y1='8.12' x2='12' y2='12'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
